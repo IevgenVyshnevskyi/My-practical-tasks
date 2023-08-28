@@ -1,0 +1,134 @@
+/* .App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
+/* In CSS, @keyframes is used to define animations. It allows you to specify a series of styles that will be applied to an element over a period of time, creating an animation effect.
+In the given code, @keyframes App-logo-spin is defining an animation named "App-logo-spin" that will be applied to the element with the class "App-logo." The animation will rotate the element from 0 degrees to 360 degrees, creating a spinning effect.
+Here's a breakdown of the code:
+
+1. @keyframes App-logo-spin: This declares the start of the keyframes animation block named "App-logo-spin."
+
+2. from: This represents the starting point of the animation, where the element's style is set to transform: rotate(0deg);, meaning it will have no rotation.
+
+3. to: This represents the ending point of the animation, where the element's style is set to transform: rotate(360deg);, meaning it will be rotated 360 degrees.
+
+When you use this animation in conjunction with an element's CSS, it will apply the rotation animation to the element and continuously rotate it 360 degrees, creating a spinning effect. For example:
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+}
+
+This CSS code applies the "App-logo-spin" animation to the elements with the class "App-logo." The animation will be infinite (infinite) and will take 20 seconds to complete (20s). The linear keyword defines a linear animation timing function, meaning it will rotate at a constant speed throughout the animation. */
+
+
+/* Additional styles for the NotebookApp and NotebookItemList components */
+
+/* Styles for the container of NotebookItemList */
+.containerStyle {
+   display: flex; /* Flexbox layout */
+   justify-content: space-around; /* Spacing between items */
+   margin: 20px; /* Margin around the container */
+ }
+
+ h1 {
+   color: #61dafb; /* Name of the list background color */
+ }
+
+ h1:hover {
+   color: #45a9d5; /* Button background color on hover */
+ }
+
+
+ /* Styles for the search field */
+ span {
+   margin-right: 10px; /* Margin on the right side of the span elements */
+ }
+ 
+ /* Styles for the textarea and input fields */
+ textarea,
+ input[type="text"] {
+   resize: both; /* Allow resizing the textarea */
+   width: 200px; /* Width of the input fields */
+   height: 40px; /* Height of the input fields */
+   margin-bottom: 10px; /* Margin at the bottom of the input fields */
+   padding: 5px; /* Padding inside the input fields */
+ }
+ 
+ /* Styles for the list of data items */
+ ol {
+   list-style: none; /* Remove default list style */
+   padding: 0; /* Remove padding from the list */
+ }
+ 
+ /* Styles for each list item */
+ li {
+   display: flex; /* Flexbox layout */
+   align-items: center; /* Align items (vertically centered) */
+   justify-content: space-between; /* Spacing between items */
+   margin-bottom: 5px; /* Margin at the bottom of each item */
+ }
+ 
+ /* Styles for the action buttons */
+ button {
+   padding: 5px 10px; /* Padding inside the buttons */
+   background-color: #61dafb; /* Button background color */
+   border: none; /* Remove border */
+   color: white; /* Button text color */
+   cursor: pointer; /* Show pointer cursor on hover */
+   border-radius: 5px; /* Rounded border corners */
+ }
+ 
+ /* Hover styles for buttons */
+ button:hover {
+   background-color: #45a9d5; /* Button background color on hover */
+ }
+ 
+ /* Styles for the note item when in editing mode */
+ /* span.edit-mode {
+   display: none; // Hide element in editing mode
+ }*/
+
+ /* Styles for the note item when showing the input field */
+ /* span.show-mode {
+   display: block; // Display element when showing the input field 
+ } */
+ 
+ /* Styles for the note item buttons */
+ button.edit-button {
+   margin-right: 5px; /* Margin on the right side of the edit buttons */
+ }

@@ -1,0 +1,79 @@
+/* Styles for the checklist container */
+.Checklist {
+   text-align: center;
+ }
+
+ /* Styles for the input field */
+ input {
+   width: 200px;
+   height: 40px;
+   padding: 5px;
+   margin-bottom: 10px;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   font-size: 16px;
+ }
+
+ /* Styles for the "ADD DATA" button */
+ button {
+   padding: 5px 10px;
+   background-color: #61dafb;
+   border: none;
+   color: white;
+   cursor: pointer;
+   border-radius: 5px;
+ }
+
+ button:hover {
+   background-color: #45a9d5;
+ }
+
+ /* Styles for the list of data items */
+ .Checklist-items {
+   width: 500px;
+   margin: auto;
+ }
+
+ /* Styles for each data item */
+ .Checklist-item {
+   text-align: center;
+   padding: 10px;
+   margin-top: -10px;
+   margin-bottom: 10px;
+   margin: 10px auto;
+   align-items: center;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   background-color: #f7f7f7;
+   width: 500px;
+
+   cursor: grab;
+ }
+
+ .Checklist-item:hover {
+   background-color: #e0e0e0;
+ }
+
+ .Checklist-item.drag-over {
+   background-color: #db6b7c;
+ }
+
+ .Checklist-item.checked {
+   text-decoration: line-through;
+   background-color: #c1ffc1;
+ }
+
+ /* Styles for the action buttons */
+ .Button {
+   margin-right: 5px;
+   padding: 5px 10px;
+   background-color: #61dafb;
+   border: none;
+   color: white;
+   cursor: pointer;
+   border-radius: 5px;
+ }
+
+ .Button:hover {
+   background-color: #45a9d5;
+ }
