@@ -4,17 +4,23 @@ import { ITodo } from '../types/data';
 
 interface ITodoListProps {
    items: ITodo[],
+   removeTodo: (id: number | string) => void,
+   toggleTodo: (id: number | string) => void,
 }
 
 export const TodoList: React.FC<ITodoListProps> = (props) => {
-   const todos = props.items;
+   const {items, removeTodo, toggleTodo} = props;
 
-
+   
    return <div>
    {
-      todos.map((todo)=>(
-         <TodoItem key={todo.id} {...todo} />
-         // <TodoItem key={todo.id} todo={todo} />  // another variant of pre-recording
+      items.map((todo)=>(
+         <TodoItem
+            key={todo.id}
+            removeTodo={removeTodo}
+            toggleTodo={toggleTodo}
+            {...todo}
+         />
       ))
    }
    </div>;
