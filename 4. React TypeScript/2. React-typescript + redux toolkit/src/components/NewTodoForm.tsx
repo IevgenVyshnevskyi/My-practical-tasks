@@ -1,3 +1,4 @@
+
 interface INewTodoFormProps {
    value: string,
    updateText: (str: string) => void,
@@ -12,7 +13,7 @@ const NewTodoForm: React.FC<INewTodoFormProps> = ({ value, updateText, handleAct
          <input
             placeholder ='new todo'
             value={value}
-            onChange={(e) => updateText(e.target.value)}
+            onChange={(event) => updateText(event.target.value)}
          />
          <button onClick={handleAction}>Add todo</button>
       </label>

@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import {useAppDispatch} from './hooks';
 
-import { addTodo } from './store/todoSlice';
+import { setAddTodo } from './store/todoSlice';
 import NewTodoForm from './components/NewTodoForm';
 import TodoList from './components/TodoList';
 
@@ -14,7 +14,7 @@ function App() {
 
    const handleAction = () => {
       if(value.trim().length){
-         dispatch(addTodo(value));
+         dispatch(setAddTodo(value));
          setValue('');
       }
    }

@@ -1,5 +1,5 @@
 import { useAppDispatch } from '../hooks';
-import {toggleComplete, removeTodo} from '../store/todoSlice';
+import {setToggleComplete, setRemoveTodo} from '../store/todoSlice';
 
 interface TodoItemProps {
    id: string,
@@ -15,10 +15,10 @@ const TodoItem: React.FC<TodoItemProps > = ({ id, title, isCompleted }) => {
          <input
             type='checkbox'
             checked={isCompleted}
-            onChange={() => dispatch(toggleComplete(id))}
+            onChange={() => dispatch(setToggleComplete(id))}
          />
          <span>{title}</span>
-         <span onClick={() => dispatch(removeTodo(id))}>&times;</span>
+         <span onClick={() => dispatch(setRemoveTodo(id))}>&times;</span>  {/* where symbol '&times;' is a graphic symbol that looks like an "×" or "x" sign, and it is usually used to indicate a button or action to close or delete something. */}
       </li>
    );
 };
