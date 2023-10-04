@@ -1,7 +1,6 @@
 import {useState, useEffect } from 'react';
 import {useAppDispatch, useAppSelector} from './hooks';
 
-// import { setAddTodo, addNewTodo } from './store/todoSlice';
 import { fetchTodos, addNewTodo } from './store/todoSlice';
 import NewTodoForm from './components/NewTodoForm';
 import TodoList from './components/TodoList';
