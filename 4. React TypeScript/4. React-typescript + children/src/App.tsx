@@ -3,7 +3,7 @@ import { FC, ReactNode, ReactElement } from "react";
 
 type BoxProps = {
    className?: string,
-   children: ReactNode,  // in this case, there can be any number of child elements.
+   children: ReactNode,  // in this case, there can be any number of child ("children") elements.
 }
 
 const Box = ({children, className}: BoxProps) => {
@@ -19,7 +19,7 @@ const Box = ({children, className}: BoxProps) => {
 
 
 interface ButtonProps {
-   children: string,
+   children: string,  // in this case, there can be only "children" element with string type.
 }
 
 const Button = ({children}: ButtonProps) => {
@@ -32,7 +32,7 @@ const Button = ({children}: ButtonProps) => {
 
 
 interface HomePageProps {
-   title: string,
+   title: string,  // in this case, there can be only "props" element - "title" with "string" type (not "children" element).
 }
 
 const HomePage: FC<HomePageProps> = ({title}) => {
@@ -42,10 +42,11 @@ const HomePage: FC<HomePageProps> = ({title}) => {
          <Button>Button1</Button>
          <Button>Button2</Button>
          <Button>Button3</Button>
+         <h2 style={{color: 'orange'}}><b>{title}</b></h2>
          <CentreBox>
             <Button>Button4</Button>
             {/* <Button>Button5</Button> // not a valid entry. Only one child element can be passed. */}
-            {/* <div>  // such an entry is allowed if several child elements are wrapped in that parent element.
+            {/* <div>  // such an entry is allowed if several child elements are wrapped in they parent element.
                <h1>React Children with TypeScript</h1>
                <Button>Button1</Button>
             </div> */}
@@ -56,7 +57,7 @@ const HomePage: FC<HomePageProps> = ({title}) => {
 
 
 interface CentreBoxProps {
-   children: ReactElement,  // (or 'jsx.element') is used instead of 'ReactChild', makes a restriction, namely: passes only one child element (сhild). 'ReactChild' is deprecated.
+   children: ReactElement,  // (or 'jsx.element') is used instead (замість) of 'ReactChild' (is deprecated), makes a restriction (обмеження), namely: passes only one child element (сhild), or several child elements that are wrapped in they parent element.
 }
 
 const CentreBox = ({children}: CentreBoxProps) => {
@@ -92,7 +93,7 @@ export default function App() {
                <Button>Button1</Button>
             </div> */}
          </CentreBox>
-         <HomePage title='HomePage'/>
+         <HomePage title='homepage'/>
          {/* <HomePage title='HomePage'>JHGJGKJGHK</HomePage> */}
       </Box>
    );
