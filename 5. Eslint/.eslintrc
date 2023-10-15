@@ -1,0 +1,55 @@
+{
+   "extends": [
+      "react-app",
+      "react-app/jest"  // This part of the configuration specifies which loaded rules to use. In this case, the rules from Create React App ("react-app") and the rules for tests using Jest ("react-app/jest") are used.
+   ],
+
+   // These settings define the standards of your project and help you identify and fix possible errors or implicit rules in your code.
+   // https://eslint.org/docs/latest/rules/no-unused-vars#rule-details
+   "rules": {  // This object describes ESLint rules that you can set or configure. Each key of this object corresponds to a specific rule.
+      //"no-unused-vars": "off",  // This position disables the rule. This means that ESLint will not check other parameters of this rule, and you can use variables that are not used without any errors or warnings.
+      //"no-unused-vars": "warn",  // This position includes the rule and sets the warning level ("warn"). If you have unused variables in your code, ESLint will mark them with a warning, warning you that these variables may not be used.
+      //"no-unused-vars": "error",  // This position also includes a rule, but sets the error level ("error"). If you have unused variables, ESLint will flag them as an error, and your application may refuse to run because of these errors.
+      //"no-unused-vars": ["error", { /* object with some clarifications, namely, which can be seen at the address: https://eslint.org/docs/latest/rules/no-unused-vars#options */ }]
+      
+      // This rule instructs ESLint to handle console.log() usage. It is now set to warn if you use console.log(). You can change to "error" to make it an error or "off" to disable this rule.
+      // https://eslint.org/docs/latest/rules/no-console#rule-details
+      "no-console": "warn",
+
+      // This rule is configured to use "const" instead of "let" when the variable is not reassigned. It sets the error level ("error") for not using const.
+      // https://eslint.org/docs/latest/rules/prefer-const#rule-details
+      "prefer-const": "error",
+
+      // This rule tells ESLint what kinds of quotes to use for strings. In this case, single quotes are used ("single"). You can change to "double" if you prefer double quotes.
+      // https://eslint.org/docs/latest/rules/quotes
+      "quotes": ["error", "single" /* "double" */],
+
+      // This rule tells ESLint what kinds of quotes to use for JSX attributes. In this case, double quotes are used ("prefer-double"). You can change to "prefer-single" if you want single quotes (example: в ' className="" ').
+      // https://eslint.org/docs/latest/rules/jsx-quotes
+      "jsx-quotes": ["error", "prefer-double" /* "prefer-single" */],
+
+      // This rule is configured to use indentation with three spaces. It will warn if you don't use 3 indentation spaces.
+      // https://eslint.org/docs/latest/rules/indent
+      "indent": ["warn", 3],  // indentation behavior settings, where '3' is the number of indentations
+
+      // This rule limits the maximum string length to 120 characters. If the string exceeds this length, it sets the error level ("error").
+      // https://eslint.org/docs/latest/rules/max-len
+      "max-len": ["error", {"code": 120}],
+
+      // This rule is configured to use the last comma in lines if the object or array is spread across multiple lines.
+      // https://eslint.org/docs/latest/rules/comma-dangle
+      "comma-dangle": ["error", "always-multiline"],  // setting the behavior of working with the last comma in an object, array, etc. In our case, the last comma should be: (https://eslint.org/docs/latest/rules/comma-dangle#rule-details).
+
+      // This rule is configured to use a "semicolon" at the end of a sentence. It displays a warning ("warn") if you don't use a semicolon.
+      // https://eslint.org/docs/latest/rules/semi
+      "semi": ["warn", "always"],  // setting the behavior of working with 'semicolon' in a line. In our case, the last comma should be: (https://eslint.org/docs/latest/rules/comma-dangle#rule-details)
+
+      // This rule is configured to control the order in which modules are imported. It requires compliance with a specified order of imports, and sets an error level ("error") for non-compliance with this order.
+      // https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/order.md#importorder
+      "import/order": ["error", {  // setting the behavior of work with 'import' (imports). In our case, the last comma should be: (https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/order.md#importorder).
+         "groups": ["builtin", "external", "internal", "parent", "sibling", "index", "object", "type"],
+         // https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/order.md#newlines-between-ignorealwaysalways-and-inside-groupsnever
+         "newlines-between": "always-and-inside-groups"  // setting the behavior of working with indents between import periods (there must be at least one indent between groups of imports): (https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/order.md#newlines-between-ignorealwaysalways-and-inside-groupsnever)
+      }]
+   }
+}
