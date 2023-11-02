@@ -11,7 +11,32 @@
 
 <body>
    <!-- header>a{webDew}+nav>ul>li*3>a[href=#] -->
-   <header>
+   <header class="px-2 border-b">
+      <a class="uppercase font-bold text-purple-800" href="#">webDew</a>
+      <nav>
+         <ul class="text-gray-500 font-semibold">
+            <li><a class="inline-block py-3 px-2" href="#">Home</a></li>
+            <li><a class="inline-block py-3 px-2" href="#">About</a></li>
+            <li><a class="inline-block py-3 px-2" href="#">Contacts</a></li>
+         </ul>
+      </nav>
+   </header>
+
+   <!-- main>div>div>a[href=#]*3 -->
+   <main>
+      <!-- breadcrumbs -->
+      <div>
+         <!-- where "overflow-y-auto" allows horizontal scrolling / "whitespace-nowrap" we prohibit the transfer of content to a new term  -->
+         <div class="py-4 overflow-y-auto whitespace-nowrap">
+            <a class="text-gray-600" href="#">Home</a>
+            <span class="mx-2 text-gray-500">&gt;</span> <!-- where "&gt;" is just sign ">" -->
+            <a class="text-gray-600" href="#">News</a>
+            <span class="mx-2 text-gray-500">&gt;</span> <!-- where "&gt;" is just sign ">" -->
+            <a class="text-gray-600" href="#">Tech</a>
+         </div>
+      </div>
+   </main>
+   <header class="mx-10 py-5">
       <a class="uppercase font-bold text-purple-800" href="#">webDew</a>
       <nav>
          <ul class="text-gray-500 font-semibold">
@@ -21,11 +46,30 @@
          </ul>
       </nav>
    </header>
-   <br />
-   <h1 class="text-3xl font-bold underline text-indigo-700">Hello world!</h1>
-   <h1 class="text font-bold underline text-indigo-700">Hello world!</h1>
-   <h1 class="text-xl font-semibold line-through text-indigo-700">Hello world!</h1>
-   <h1 class="text-xl font-medium line-through text-red-400">Hello world!</h1>
+   <header class="mt-10 pl-5 border-b-8 border-b-red-900 border-dashed">
+      <a class="uppercase font-bold text-purple-800" href="#">webDew</a>
+      <nav>
+         <ul class="text-gray-500 font-semibold">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contacts</a></li>
+         </ul>
+      </nav>
+   </header>
 </body>
+
+<!-- footer -->
+<!-- footer>div>div>h6+ul>li*2>a[href=#] -->
+<footer class="border-t mt-10 py-10 px-2">
+   <div>
+      <div>
+         <h6 class="font-semibold text-gray-700 mb-4">Company</h6>
+         <ul>
+            <li><a class="inline-block text-gray-500 py-2" href="#">Team</a></li>
+            <li><a class="inline-block text-gray-500 py-2" href="#">About us</a></li>
+         </ul>
+      </div>
+   </div>
+</footer>
 
 </html>
