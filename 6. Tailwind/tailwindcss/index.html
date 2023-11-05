@@ -21,7 +21,13 @@
                <li><a class="header-link" href="#">Contact</a></li>
             </ul>
             <ul class="inline-flex items-center">
-               <li><button class="header-btn">Login</button></li>
+               <li><button class="header-btn">Login 1 (duration-500)</button></li>
+               <li><button class="header-btn ease-linear">Login 2 (duration-500 + ease-linear)</button></li>
+               <li><button class="header-btn ease-in">Login 3 (duration-500 + ease-in)</button></li>
+               <li><button class="header-btn ease-out">Login 4 (duration-500 + ease-out)</button></li>
+               <li><button class="header-btn ease-in-out">Login 5 (duration-500 + ease-in-out)</button></li>
+               <li><button class="header-btn transition-all duration-1000 delay-500">Login 6 (duration-1000 +
+                     delay-500)</button></li>
                <li><button class="header-btn">Register</button></li>
             </ul>
          </nav>
@@ -36,7 +42,7 @@
       <!-- breadcrumbs -->
       <div class="px-2 flex items-center">
          <div class="py-4 overflow-y-auto whitespace-nowrap flex items-center">
-            <a class="text-gray-600 hover:text-gray-900" href="#">
+            <a class="text-gray-600 hover:text-gray-900 transition-all duration-500" href="#">
                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
                   stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -49,14 +55,14 @@
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                </svg>
             </span>
-            <a class="text-gray-600 hover:text-gray-900" href="#">News</a>
+            <a class="text-gray-600 hover:text-gray-900 transition-all duration-500" href="#">News</a>
             <span class="mx-2 text-gray-300">
                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
                   stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                </svg>
             </span>
-            <a class="text-gray-600 hover:text-gray-900" href="#">Tech</a>
+            <a class="text-gray-600 hover:text-gray-900 transition-all duration-500" href="#">Tech</a>
          </div>
       </div>
 
@@ -73,6 +79,15 @@
                <h2 class="text-4xl font-semibold text-gray-100 leading-tight">
                   Lorem ipsum dolor sit amet consectetur.
                </h2>
+               <!-- div>img+div>p+time> -->
+               <div class="flex mt-3">
+                  <img class="h-10 w-10 rounded-full mr-2 object-cover"
+                     src="https://randomuser.me/api/portraits/men/51.jpg" alt="author">
+                  <div>
+                     <p class="font-semibold text-gray-200 text-sm">John Doe</p>
+                     <time class="text-gray-400 text-xs">14 March</time>
+                  </div>
+               </div>
             </div>
          </a>
 
@@ -86,6 +101,14 @@
                <h2 class="text-4xl font-semibold text-gray-100 leading-tight">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                </h2>
+               <div class="flex mt-3">
+                  <img class="h-10 w-10 rounded-full mr-2 object-cover"
+                     src="https://randomuser.me/api/portraits/women/7.jpg" alt="author">
+                  <div>
+                     <p class="font-semibold text-gray-200 text-sm">Jane Doe</p>
+                     <time class="text-gray-400 text-xs">15 March</time>
+                  </div>
+               </div>
             </div>
          </a>
       </section>
@@ -98,7 +121,7 @@
                   <!-- where "object-cover" allows us to get proportional dimensions of our picture -->
                   <img class="w-full h-48 lg:w-48 opacity-80 object-cover lg:mr-4" src="./public/images/img-3.jpg"
                      alt="img">
-                  <div class="flex">
+                  <div class="flex flex-col justify-between">
                      <div>
                         <h3 class="mb-2 text-gray-700 font-bold text-2xl">
                            Phasellus pharetra enim at nisl pharetra, nec fringilla arcu
@@ -111,6 +134,15 @@
                            survived not only five centuries, but also the leap into
                            electronic typesetting, remaining essentially unchanged.
                         </p>
+
+                     </div>
+                     <div class="flex mt-3">
+                        <img class="h-10 w-10 rounded-full mr-2 object-cover"
+                           src="https://randomuser.me/api/portraits/women/5.jpg" alt="author">
+                        <div>
+                           <p class="font-semibold text-gray-400 text-sm">Lise Mack</p>
+                           <time class="text-gray-400 text-xs">17 March</time>
+                        </div>
                      </div>
                   </div>
                </a>
@@ -119,7 +151,7 @@
                   <!-- where "object-cover" allows us to get proportional dimensions of our picture -->
                   <img class="w-full h-48 lg:w-48 opacity-80 object-cover lg:mr-4" src="./public/images/img-3.jpg"
                      alt="img">
-                  <div class="flex">
+                  <div class="flex flex-col justify-between">
                      <div>
                         <h3 class="mb-2 text-gray-700 font-bold text-2xl">
                            Cras ut elit id ligula placerat molestie at non erat.
@@ -130,6 +162,15 @@
                            its layout. The point of using Lorem Ipsum is that it has a
                            more-or-less normal distribution of letters.
                         </p>
+
+                     </div>
+                     <div class="flex mt-3">
+                        <img class="h-10 w-10 rounded-full mr-2 object-cover"
+                           src="https://randomuser.me/api/portraits/women/17.jpg" alt="author">
+                        <div>
+                           <p class="font-semibold text-gray-400 text-sm">Monica Obama</p>
+                           <time class="text-gray-400 text-xs">15 March</time>
+                        </div>
                      </div>
                   </div>
                </a>
@@ -138,7 +179,7 @@
                   <!-- where "object-cover" allows us to get proportional dimensions of our picture -->
                   <img class="w-full h-48 lg:w-48 opacity-80 object-cover lg:mr-4" src="./public/images/img-3.jpg"
                      alt="img">
-                  <div class="flex">
+                  <div class="flex flex-col justify-between">
                      <div>
                         <h3 class="mb-2 text-gray-700 font-bold text-2xl">
                            Ut egestas diam ut massa elementum euismod.
@@ -148,6 +189,15 @@
                            text. It has roots in a piece of classical Latin literature
                            from 45 BC, making it over 2000 years old.
                         </p>
+
+                     </div>
+                     <div class="flex mt-3">
+                        <img class="h-10 w-10 rounded-full mr-2 object-cover"
+                           src="https://randomuser.me/api/portraits/women/8.jpg" alt="author">
+                        <div>
+                           <p class="font-semibold text-gray-400 text-sm">Mary Lipton</p>
+                           <time class="text-gray-400 text-xs">13 March</time>
+                        </div>
                      </div>
                   </div>
                </a>
@@ -162,7 +212,8 @@
                   <li><a class="pagination-item" href="#">1</a></li>
                   <li><a class="pagination-item" href="#">2</a></li>
                   <li>
-                     <a class="pagination-item text-blue-600 hover:bg-blue-100 hover:text-blue-600" href="#">3</a>
+                     <a class="pagination-item text-blue-600 hover:bg-blue-100 hover:text-blue-600 transition-all duration-500"
+                        href="#">3</a>
                   </li>
                   <li><a class="pagination-item" href="#">4</a></li>
                   <li><a class="pagination-item" href="#">5</a></li>
@@ -177,28 +228,28 @@
                   Popular News
                </h5>
                <ul>
-                  <li class="px-1 py-4 border-y border-white hover:border-gray-200">
+                  <li class="px-1 py-4 border-y border-white hover:border-gray-200 transition-all duration-500">
                      <a class="flex items-center text-gray-600" href="#">
                         <span class="inline-block w-4 h-4 mr-3 bg-gradient-to-tr from-green-500 to-green-700"></span>
                         Vue
                         <span class="text-gray-500 ml-auto">23 articles</span>
                      </a>
                   </li>
-                  <li class="px-1 py-4 border-y border-white hover:border-gray-200">
+                  <li class="px-1 py-4 border-y border-white hover:border-gray-200 transition-all duration-500">
                      <a class="flex items-center text-gray-600" href="#">
                         <span class="inline-block w-4 h-4 mr-3 bg-gradient-to-tr from-orange-500 to-orange-700"></span>
                         Svelte
                         <span class="text-gray-500 ml-auto">20 articles</span>
                      </a>
                   </li>
-                  <li class="px-1 py-4 border-y border-white hover:border-gray-200">
+                  <li class="px-1 py-4 border-y border-white hover:border-gray-200 transition-all duration-500">
                      <a class="flex items-center text-gray-600" href="#">
                         <span class="inline-block w-4 h-4 mr-3 bg-gradient-to-tr from-red-500 to-red-700"></span>
                         Angular
                         <span class="text-gray-500 ml-auto">15 articles</span>
                      </a>
                   </li>
-                  <li class="px-1 py-4 border-y border-white hover:border-gray-200">
+                  <li class="px-1 py-4 border-y border-white hover:border-gray-200 transition-all duration-500">
                      <a class="flex items-center text-gray-600" href="#">
                         <span class="inline-block w-4 h-4 mr-3 bg-gradient-to-tr from-blue-500 to-blue-700"></span>
                         React
@@ -219,8 +270,9 @@
                   </h5>
                   <p class="text-gray-600 mb-4">Subscribe to our newsletter.</p>
                   <input placeholder="your email address" type="email"
-                     class="text-gray-700 bg-gray-100 p-2 w-full border rounded-t hover:border-gray-600" />
-                  <button class="px-4 py-2 bg-indigo-600 text-white rounded-b w-full hover:bg-indigo-800">
+                     class="text-gray-700 bg-gray-100 p-2 w-full border rounded-t hover:border-gray-600 transition-all duration-500" />
+                  <button
+                     class="px-4 py-2 bg-indigo-600 text-white rounded-b w-full hover:bg-indigo-800 transition-all duration-500">
                      Subscribe
                   </button>
                </div>
