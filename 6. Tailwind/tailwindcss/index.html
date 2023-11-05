@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" <!-- class="dark" -->>  <!-- when our work is finished we can remove 'class="dark"' -->
+<html lang="en">  <!-- when our work is finished we can remove 'class="dark"' -->
 
 <head>
    <meta charset="UTF-8" />
@@ -9,11 +9,12 @@
    <title>TailwindCSS</title>
 </head>
 
-<body class="bg-white dark:bg-slate-900">
-   <div class="max-w-screen-xl mx-auto">
+<!-- where "font-main" in <body class="bg-white dark:bg-slate-900 font-main"> is our custom fonts (про неї зазначено у файлі "tailwind.config.js") -->
+<body class="bg-white dark:bg-slate-900 font-main"> <!-- <div class="max-w-screen-xl mx-auto h-screen grid grid-raws-[auto_1fr_auto]"> -->
+      <div class="max-w-screen-xl mx-auto h-screen grid grid-rows-layout">  <!-- де "grid-rows-layout" наш кастомна розмітка (про неї зазначено у файлі "tailwind.config.js") -->
       <!-- header -->
       <header class="px-2 border-b flex items-center justify-between h-14">
-         <a class="dark:text-purple-500 uppercase font-bold text-purple-800" href="#">webDev</a>
+         <a class="dark:text-purple-500 uppercase font-bold text-logo-main" href="#">webDev</a>  <!-- де "text-logo-main" наш кастомний колір (про нього зазначено у файлі "tailwind.config.js") -->
          <nav class="hidden md:flex items-center">
             <ul class="inline-flex items-center">
                <li><a class="header-link" href="#">Home</a></li>
@@ -39,6 +40,7 @@
          </button>
       </header>
 
+      <div>
       <!-- breadcrumbs -->
       <div class="px-2 flex items-center">
          <div class="py-4 overflow-y-auto whitespace-nowrap flex items-center">
@@ -285,6 +287,7 @@
          </div>
       </main>
 
+      </div>
       <!-- footer -->
       <footer class="border-t mt-10 py-10 px-2">
          <div class="md:flex">
